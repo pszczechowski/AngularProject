@@ -1,0 +1,31 @@
+
+<form [formGroup]="contactForm">
+ <p>
+   <mat-form-field appearance="fill">
+   <mat-label>Podaj Imię</mat-label>
+   <input matInput formControlName="name">
+   <mat-hint>Name</mat-hint>
+   </mat-form-field>
+</p>
+ <p>
+   <mat-form-field appearance="fill">
+   <mat-label>Podaj Email</mat-label>
+   <input matInput formControlName="email">
+   <mat-hint>Email</mat-hint>
+   </mat-form-field>
+</p>
+ <p>
+   <mat-form-field appearance="fill">
+   <mat-label>Treść wiadomości</mat-label>
+   <textarea id="textField" matInput formControlName="textField"></textarea>
+   <mat-hint>Text Field</mat-hint>
+   </mat-form-field>
+</p>
+        
+       <!-- Imię: <input type="text" formControlName="name"> -->
+       
+        <!-- Email: <input type="text" formControlName="email"><br>
+        Wpis: <input id="textField" type="text" formControlName="textField"><br> -->
+</form>
+<button type="submit" [disabled]="contactForm.invalid" (click)="submitForm()">Submit</button>
+
